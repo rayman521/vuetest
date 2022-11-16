@@ -33,6 +33,8 @@ public class InfoController {
 	public List<userInfoDto> getuserInfo(@RequestBody String userinfo){
 	
 		System.out.println("gdgdgd :: " + userinfo);
+		System.out.println("gdgdgd :: " + userinfo);
+		System.out.println("gdgdgd :: " + userinfo);
 		
 		JSONObject jsonObject = new JSONObject(userinfo);
 		
