@@ -41,4 +41,8 @@
     left: 0;
     right: 0; 
   }
+  a {
+    text-decoration: none;
+    color: black;
+  }
   </style>
