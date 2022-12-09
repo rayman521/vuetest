@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Cmmheader></Cmmheader>
+   <img id="img_loopie" alt="Vue logo" src="./assets/loopie.jpg">
+   <button id="bt_loopie" type="button" class="btn btn-secondary btn-lg">시작!</button>
+   <Cmmfooter></Cmmfooter>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Cmmheader from './components/CmmHeader.vue'
+import Cmmfooter from './components/CmmFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Cmmheader,
+    Cmmfooter
   }
 }
 </script>
@@ -21,6 +25,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
+}
+#bt_loopie {
+  margin-top: 10px;
+ background-color : palevioletred;
+}
+#img_loopie {
+ background-color : palevioletred;
+ height: 470px;
 }
 </style>

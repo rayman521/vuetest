@@ -49,6 +49,15 @@ public class InfoController {
 		return mapper.getUserList(userInfoDto);
 	}
 	
+	@GetMapping("/test")
+	public String test(){
+	
+		String test = "gdgd";
+		
+		
+		return test;
+	}
+	
 
 	@PostMapping("/insert")
 	public void insert(@RequestBody String userinfo){
