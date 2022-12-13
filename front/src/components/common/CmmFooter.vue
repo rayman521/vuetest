@@ -5,10 +5,14 @@
  </footer>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+
+@Options({
     name : 'CmmFooter'
-}
+})
+export default class CmmFooter extends Vue {}
+
 </script>
 
 <style>

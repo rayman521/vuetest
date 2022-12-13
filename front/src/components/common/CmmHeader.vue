@@ -5,10 +5,14 @@
   </header>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+
+@Options({
     name : 'CmmHeader'
-}
+})
+export default class CmmHeader extends Vue {}
+
 </script>
 
 <style>

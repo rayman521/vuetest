@@ -1,21 +1,43 @@
 <template>
-  <Cmmheader></Cmmheader>
-   <img id="img_loopie" alt="Vue logo" src="./assets/loopie.jpg">
-   <button id="bt_loopie" type="button" class="btn btn-secondary btn-lg">시작!</button>
-   <Cmmfooter></Cmmfooter>
+<CmmHeaderVue></CmmHeaderVue>
+<div v-if="mainDelete == false">
+<img alt="loopie" src="./assets/loopie.jpg">
+<button @click="changeDelete()"><router-link to="/list">시작하기!</router-link></button>
+</div>
+<router-view></router-view>
+<CmmFooterVue></CmmFooterVue>
 </template>
 
-<script>
-import Cmmheader from './components/CmmHeader.vue'
-import Cmmfooter from './components/CmmFooter.vue'
+<script lang="ts">
 
-export default {
-  name: 'App',
+
+import { Options, Vue } from 'vue-class-component';
+import CmmHeaderVue from './components/common/CmmHeader.vue';
+import CmmFooterVue from './components/common/CmmFooter.vue';
+
+@Options({
   components: {
-    Cmmheader,
-    Cmmfooter
+    CmmHeaderVue,
+    CmmFooterVue
+  },data() {
+    return {
+      mainDelete : false
+    }
+  },methods :{
+    changeDelete(){
+      this.mainDelete = true;
+    }
+    //바운딩 순서... window.onload 의 역활 함 
+  },created (){
+    const crUrl = window.location.href; // 현재 url 
+      const mainUrl = 'http://localhost:8080/'; // 메인화면 url
+      
+      if(crUrl != mainUrl){
+        this.mainDelete = true;
+      } 
   }
-}
+})
+export default class App extends Vue {}
 </script>
 
 <style>
@@ -25,14 +47,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
-}
-#bt_loopie {
-  margin-top: 10px;
- background-color : palevioletred;
-}
-#img_loopie {
- background-color : palevioletred;
- height: 470px;
+  margin-top: 60px;
 }
 </style>

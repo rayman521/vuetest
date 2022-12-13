@@ -1,9 +1,12 @@
 import { createWebHistory, createRouter } from "vue-router";
 
+import TheContents from './components/view/TheContents.vue'
+
 const routes = [
   {
-    path: "/경로",
-    //component: import해온 컴포넌트,
+    // 컨텐츠 뷰
+    path: "/list",
+    component: TheContents,
   }
 ];
 
