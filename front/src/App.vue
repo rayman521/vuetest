@@ -28,7 +28,7 @@ import CmmFooterVue from './components/common/CmmFooter.vue';
       this.mainDelete = true;
     }
     //바운딩 순서... window.onload 의 역활 함 
-  },created (){
+  },mounted (){
     const crUrl = window.location.href; // 현재 url 
       const mainUrl = 'http://localhost:8080/'; // 메인화면 url
       
