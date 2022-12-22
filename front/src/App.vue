@@ -7,7 +7,7 @@
     <!-- 시작 페이지 -->
     <div id="start-page">
         <h1>나만의 심리테스트 - 가이드</h1>
-        <button @click="startpageEnd()">시작하기</button>
+        <button @click="main1()">시작하기</button>
         <div id="looImg">
           <img src="./assets/loopie.jpg" alt="loopie">
         </div>
@@ -88,15 +88,11 @@
 
 <script lang="ts">
 
-
 import { Options, Vue } from 'vue-class-component';
-import CmmHeaderVue from './components/common/CmmHeader.vue';
-import CmmFooterVue from './components/common/CmmFooter.vue';
+import { useStore } from 'vuex';
 
 @Options({
   components: {
-    CmmHeaderVue, // 헤더 뷰 
-    CmmFooterVue  // 풋터 뷰 
   },data() {
     return {
       mainDelete : false,
@@ -118,7 +114,8 @@ import CmmFooterVue from './components/common/CmmFooter.vue';
         stPage.style.display = "none";
         miPage.style.display = "block"
     },main1(){
-      let miPage = document.getElementById("main-page1") as any;
+      let store = useStore();
+      console.log(store.state);
     }
     //바운딩 순서... window.onload 의 역활 함 
   },mounted (){
