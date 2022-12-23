@@ -108,7 +108,7 @@ import { Options, Vue } from 'vue-class-component';
       }
     },
     methods: {
-      //체크박스 중복체크
+      //체크박스 중복체크방지
       clickFunc(event : any) {
           for(let i=0; i<this.checkedValues.length;i++){
             if(this.checkedValues[i] !== event.target.value){
