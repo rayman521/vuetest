@@ -11,7 +11,7 @@
         <div id="looImg">
           <img src="./assets/loopie.jpg" alt="loopie" id="loopieImg">
         </div>
-        <button id="mibu" @click="startpageEnd()"><router-link to="/content">시작하기</router-link></button>
+        <button id="mibu" @click="startpageEnd()"><router-link to="/content/1">시작하기</router-link></button>
     </div>
 
     <!-- routerView 출력 위치 -->

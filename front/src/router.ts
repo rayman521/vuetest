@@ -5,7 +5,7 @@ import TheResult from './components/view/TheResult.vue'
 const routes = [
   {
     // 컨텐츠 뷰
-    path: "/content",
+    path: "/content/:id",
     component: TheContents,
   },
   {
